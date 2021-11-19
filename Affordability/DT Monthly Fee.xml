@@ -1,0 +1,24 @@
+<DecisionTable name="DT Monthly Fee" processAll="False">
+  <Declaration>
+    <Define name="RequestedProduct" direction="In" />
+    <Define name="RequiredMonthlyInstallment" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BoxedExpression.xml" />
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="ProductType" term="ProductType" />
+    <Action name="Required Monthly Installment" expression="RequiredMonthlyInstallment = PMT (RequestedProduct.Amount,RequestedProduct.Rate,RequestedProduct.Term) + $value" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>STANDARD LOAN</Value>
+      <Value>20.00</Value>
+    </Row>
+    <Row>
+      <Value>SPECIAL LOAN</Value>
+      <Value>25.00</Value>
+    </Row>
+  </Data>
+</DecisionTable>

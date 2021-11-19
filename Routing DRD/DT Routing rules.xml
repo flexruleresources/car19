@@ -1,0 +1,54 @@
+<DecisionTable name="DT Routing" processAll="False">
+  <Declaration>
+    <Define name="PostBureauRiskCategory" direction="In" />
+    <Define name="Affordability" direction="In" />
+    <Define name="Routing" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Post-Bureau Risk Category" term="PostBureauRiskCategory" />
+    <Condition name="Post-Bureau Affordability" expression="Affordability" />
+    <Condition name="Bankrupt" expression="BureauData.Bankrupt" />
+    <Condition name="Credit Score" expression="BureauData.CreditScore" />
+    <Action name="Routing" expression="Routing" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value></Value>
+      <Value>false</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>DECLINE</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>true</Value>
+      <Value></Value>
+      <Value>DECLINE</Value>
+    </Row>
+    <Row>
+      <Value>HIGH</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>REFER</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>&lt;580</Value>
+      <Value>REFER</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>ACCEPT</Value>
+    </Row>
+  </Data>
+</DecisionTable>

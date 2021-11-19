@@ -1,0 +1,27 @@
+<DecisionTable name="DT Credit contingency factor" processAll="False">
+  <Declaration>
+    <Define name="CreditContingencyFactor" direction="Out" />
+    <Define name="riskList" direction="In" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Risk Category" term="RiskCategory" />
+    <Action name="Credit Contingency Factor" expression="CreditContingencyFactor" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>"DECLINE", "HIGH"</Value>
+      <Value>0.6</Value>
+    </Row>
+    <Row>
+      <Value>"MEDIUM"</Value>
+      <Value>0.7</Value>
+    </Row>
+    <Row>
+      <Value>"LOW", "VERY LOW"</Value>
+      <Value>0.8</Value>
+    </Row>
+  </Data>
+</DecisionTable>

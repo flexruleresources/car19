@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExecTemplate>
+  <Record date="2017-07-11T02:01:13.2009033Z" file="Strategy DRD\DRD Strategy.xml" title="testing Strategy DRD">
+    <Run providerType="DataComposer" file="Data\Testing Strategy DRD.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+</ExecTemplate>

@@ -1,0 +1,25 @@
+<DecisionTable name="DT Affordability" processAll="False">
+  <Declaration>
+    <Define name="RequestedProduct" direction="In" />
+    <Define name="CreditContingencyFactor" direction="In" />
+    <Define name="RequiredMonthlyInstallment" direction="In" />
+    <Define name="Affordability" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BoxedExpression.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Disposable Income * Credit contingency factor Greater than Required Monthly Installment" expression="Disposable Income (ApplicantData.Monthly.Income,ApplicantData.Monthly.Repayments,ApplicantData.Monthly.Expenses) * CreditContingencyFactor &gt; RequiredMonthlyInstallment" />
+    <Action name="Affordability Status" expression="Affordability" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>true</Value>
+      <Value>true</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value>false</Value>
+    </Row>
+  </Data>
+</DecisionTable>

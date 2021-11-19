@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "ApplicantData",
+    "Assembly": null,
+    "Type": "FlexRule.Json",
+    "Object": "{\r\n  \"Age\": 51 ,\r\n  \"MaritalStatus\": \"M\",\r\n  \"EmploymentStatus\": \"EMPLOYED\",\r\n  \"ExistingCustomer\": false,\r\n  \"Monthly\":{\r\n\t\"Income\": 10000.0m,\r\n\t\"Repayments\": 2500.0m,\r\n\t\"Expenses\": 3000.0m\r\n  }\r\n}\r\n",
+    "JsonSource": null,
+    "IsParameterList": false
+  },
+  {
+    "Name": "RequestedProduct",
+    "Assembly": null,
+    "Type": "FlexRule.Json",
+    "Object": "\r\n{\r\n  \"ProductType\": \"STANDARD LOAN\", \r\n  \"Amount\":10000m,\r\n  \"Rate\": 0.25m,\r\n  \"Term\": 36  \r\n}\r\n\r\n",
+    "JsonSource": null,
+    "IsParameterList": false
+  }
+]

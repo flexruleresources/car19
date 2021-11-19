@@ -1,0 +1,31 @@
+<DecisionTable name="DT Strategy" processAll="False">
+  <Declaration>
+    <Define name="Eligibility" direction="In" />
+    <Define name="BureauCallType" direction="In" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Eligibility" term="Eligibility" />
+    <Condition name="Bureau Call Type" term="BureauCallType" />
+    <Action name="Strategy" term="Strategy" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>Ineligible</Value>
+      <Value></Value>
+      <Value>Decline</Value>
+    </Row>
+    <Row>
+      <Value>Eligible</Value>
+      <Value>FULL</Value>
+      <Value>Bureau</Value>
+    </Row>
+    <Row>
+      <Value>Eligible</Value>
+      <Value>NONE</Value>
+      <Value>Through</Value>
+    </Row>
+  </Data>
+</DecisionTable>

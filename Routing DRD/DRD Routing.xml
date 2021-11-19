@@ -1,0 +1,28 @@
+<DRD name="DRD Routing">
+  <Declaration>
+    <Define name="ApplicantData" direction="In" />
+    <Define name="RequestedProduct" direction="In" />
+    <Define name="riskList" direction="Out" />
+    <Define name="Affordability" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BoxedExpression.xml" />
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Nodes>
+    <Decision name="DT Routing" type="Table" uri="Routing DRD\DT Routing rules.xml" contextMode="Shared" />
+    <Decision name="DT Post-bureau risk category" type="Table" uri="Routing DRD\DT Post-bureau risk category table.xml" contextMode="Shared">
+      <Transition name="Transition1" to="DT Routing" relationType="Information" />
+      <Transition name="Transition4" to="DRD Affordability" relationType="Information" />
+    </Decision>
+    <Decision name="DT Application risk score" type="Table" uri="Strategy DRD\DT Application risk score model.xml" contextMode="Shared">
+      <Transition name="Transition3" to="DT Post-bureau risk category" relationType="Information" />
+    </Decision>
+    <SubDrd name="DRD Affordability" uri="Affordability\Affordability.xml" contextMode="New">
+      <Param name="riskList" value="PostBureauRiskCategory" />
+      <Param name="ApplicantData" value="ApplicantData" />
+      <Param name="RequestedProduct" value="RequestedProduct" />
+      <Transition name="Transition5" to="DT Routing" relationType="Information" />
+    </SubDrd>
+  </Nodes>
+</DRD>

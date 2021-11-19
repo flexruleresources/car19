@@ -1,0 +1,57 @@
+<DecisionTable name="DT Pre-bureau risk category" processAll="False">
+  <Declaration>
+    <Define name="ApplicantData" direction="In" />
+    <Define name="result" direction="In" />
+    <Define name="PreBureauRiskCategory" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Existing Customer" term="ExistingCustomer" />
+    <Condition name="Application Risk Score" expression="result" />
+    <Action name="Pre-Bureau Risk Category" term="PreBureauRiskCategory" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>false</Value>
+      <Value>&lt;100</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>[100,120)</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>[120,130]</Value>
+      <Value>LOW</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>&gt;130</Value>
+      <Value>VERY LOW</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&lt;80</Value>
+      <Value>DECLINE</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>[80,90)</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>[90,110]</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&gt;110</Value>
+      <Value>LOW</Value>
+    </Row>
+  </Data>
+</DecisionTable>

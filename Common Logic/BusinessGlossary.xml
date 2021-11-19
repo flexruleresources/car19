@@ -1,0 +1,57 @@
+<Glossary name="sample glossary">
+  <Declaration>
+    <Define name="Strategy" direction="In" />
+    <Define name="BureauCallType" direction="In" />
+    <Define name="Eligibility" direction="In" />
+    <Define name="PreBureauRiskCategory" direction="In" />
+  </Declaration>
+  <Term name="Eligibility" expression="Eligibility" domain="Options">
+    <Option value="Ineligible" />
+    <Option value="Eligible" />
+  </Term>
+  <Term name="BureauCallType" expression="BureauCallType" domain="Options">
+    <Option value="FULL" />
+    <Option value="NONE" />
+    <Option value="MINI" />
+  </Term>
+  <Term name="Strategy" expression="Strategy" domain="Options">
+    <Option value="Decline" />
+    <Option value="Bureau" />
+    <Option value="Through" />
+  </Term>
+  <Term name="MaritalStatus" expression="ApplicantData.MaritalStatus" domain="Options">
+    <Option value="S" />
+    <Option value="M" />
+  </Term>
+  <Term name="EmploymentStatus" expression="ApplicantData.EmploymentStatus" domain="Options">
+    <Option value="UNEMPLOYED" />
+    <Option value="EMPLOYED" />
+    <Option value="STUDENT" />
+    <Option value="SELF-EMPLOYED" />
+  </Term>
+  <Term name="ExistingCustomer" expression="ApplicantData.ExistingCustomer" domain="Boolean" />
+  <Term name="PreBureauRiskCategory" expression="PreBureauRiskCategory" domain="Options">
+    <Option value="LOW" />
+    <Option value="VERY LOW" />
+    <Option value="DECLINE" />
+    <Option value="HIGH" />
+    <Option value="MEDIUM" />
+  </Term>
+  <Term name="RiskCategory" expression="riskList |in($value)" domain="Options">
+    <Option value="&quot;HIGH&quot;" />
+    <Option value="&quot;DECLINE&quot;" />
+    <Option value="&quot;LOW&quot;" />
+    <Option value="&quot;VERY LOW&quot;" />
+    <Option value="&quot;MEDIUM&quot;" />
+  </Term>
+  <Term name="ProductType" expression="RequestedProduct.ProductType" domain="Options">
+    <Option value="STANDARD LOAN" />
+    <Option value="SPECIAL LOAN" />
+  </Term>
+  <Term name="PostBureauRiskCategory" expression="PostBureauRiskCategory" domain="Options">
+    <Option value="HIGH" />
+    <Option value="LOW" />
+    <Option value="VERY LOW" />
+    <Option value="MEDIUM" />
+  </Term>
+</Glossary>

@@ -1,0 +1,95 @@
+<Workflow name="WorkflowMainWorkflow">
+  <Declaration>
+    <Define name="ApplicantData" direction="In" />
+    <Define name="RequestedProduct" direction="In" />
+    <Define name="Strategy" direction="Out" />
+    <Define name="Routing" direction="Out" />
+    <Define name="IsValid" direction="Local" />
+    <Define name="ApplicationDeadline" type="expression" direction="Local" value="dateAdd('days',today(),7)" />
+    <Define name="BureauData" direction="In" />
+  </Declaration>
+  <Nodes>
+    <Start name="Start1">
+      <Transition name="Start WorkFlow" to="Read Application Data" />
+    </Start>
+    <Task name="Read Application Data" title="Collect Application Data" description="Collect ApplicantData and RequestedProduct">
+      <Transition name="Transition24" to="Check Deadline" expression="notificationClear(&quot;error&quot;)" />
+    </Task>
+    <Activity name="Validating Application Data">
+      <Validator return="IsValid">
+        <ValidatorSource uri="Common Logic\InputDataConcept.xml" />
+        <Fact name="Applicant data" value="ApplicantData" />
+        <Fact name="Requested product" value="RequestedProduct" />
+      </Validator>
+      <Transition name="Transition16" to="Check Input Data" />
+    </Activity>
+    <Activity name="Strategy DRD">
+      <CallDrd contextMode="Shared">
+        <DrdSource uri="Strategy DRD\DRD Strategy.xml" />
+      </CallDrd>
+      <Transition name="Transition7" to="Decide based on Strategy" />
+    </Activity>
+    <Decision name="Decide based on Strategy">
+      <Transition name="Transition26" to="Decline Application Notification" />
+      <Transition name="Transition30" to="Collect Bureau Data" expression="Affordability = null" condition="Strategy == &quot;Through&quot; or  Strategy == &quot;Bureau&quot;" />
+    </Decision>
+    <Decision name="Check Input Data">
+      <Transition name="Transition17" to="Strategy DRD" condition="IsValid" />
+      <Transition name="Transition23" to="Read Application Data" />
+    </Decision>
+    <Decision name="Check Deadline">
+      <Transition name="Transition25" to="Validating Application Data" />
+      <Transition name="Transition27" to="Deadline Termination" condition="today() &gt;= ApplicationDeadline" />
+    </Decision>
+    <Terminate name="Deadline Termination" />
+    <Activity name="Validate Bureau Data">
+      <Validator return="IsValid">
+        <ValidatorSource uri="Common Logic\InputDataConcept.xml" />
+        <Fact name="Bureau data" value="BureauData" />
+      </Validator>
+      <Transition name="Transition15" to="Routing DRD" condition="IsValid" />
+      <Transition name="Transition35" to="Collect Bureau Data" />
+    </Activity>
+    <Activity name="Routing DRD">
+      <CallDrd contextMode="Shared">
+        <DrdSource uri="Routing DRD\DRD Routing.xml" />
+      </CallDrd>
+      <Transition name="Transition18" to="Decide based on Routing" />
+    </Activity>
+    <Decision name="Decide based on Routing">
+      <Transition name="Transition22" to="Decline Application Notification" />
+      <Transition name="Transition28" to="Accept Application Notification" condition="Routing == &quot;ACCEPT&quot;" />
+      <Transition name="Transition32" to="HumanTask3" condition="Routing ==&quot;REFER&quot;" />
+    </Decision>
+    <End name="End WorkFlow" />
+    <Activity name="Decline Application Notification">
+      <Notification>
+        <Notice message="Loan Application Declined" type="Error" />
+      </Notification>
+      <Transition name="Transition21" to="Application Terminate" />
+    </Activity>
+    <Terminate name="Application Terminate" />
+    <Activity name="Accept Application Notification">
+      <Notification>
+        <Notice message="Loan Application Acceptance" type="Information" />
+      </Notification>
+      <Transition name="Transition29" to="End WorkFlow" />
+    </Activity>
+    <Task name="Collect Bureau Data" title="Collect Bureau Data" description="Collect BureauData">
+      <Transition name="Transition31" to="Validate Bureau Data" expression="notificationClear(&quot;error&quot;)" />
+    </Task>
+    <Task name="HumanTask3" title="Review Application" type="Multi">
+      <Expectations>
+        <Outcome name="Approve" />
+        <Outcome name="Reject" />
+      </Expectations>
+      <Participants>
+        <User name="JSmith" lastName="Joe" firstName="Smith" weight="1" />
+        <User name="SDann" lastName="Sara" firstName="Dann" weight="1" />
+        <Interaction policy="Vote" threshold="1" />
+      </Participants>
+      <Transition name="Transition33" to="Decline Application Notification" />
+      <Transition name="Transition34" to="Accept Application Notification" outcome="Approve" />
+    </Task>
+  </Nodes>
+</Workflow>

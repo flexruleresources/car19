@@ -1,0 +1,34 @@
+<DRD name="DRD Strategy">
+  <Declaration>
+    <Define name="ApplicantData" direction="In" />
+    <Define name="Eligibility" direction="Out" />
+    <Define name="Strategy" direction="Out" />
+    <Define name="Affordability" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Nodes>
+    <Decision name="DT Strategy" uri="Strategy DRD\DT Strategy.xml" contextMode="Shared" type="Table" />
+    <Decision name="DT Eligibility" uri="Strategy DRD\DT Eligibility rules.xml" contextMode="Shared" type="Table">
+      <Transition name="Transition1" to="DT Strategy" relationType="Information" />
+    </Decision>
+    <Decision name="DT Bureau call type" uri="Strategy DRD\DT Bureau call type table.xml" contextMode="Shared" type="Table">
+      <Transition name="Transition2" to="DT Strategy" relationType="Information" />
+    </Decision>
+    <Decision name="DT Pre-bureau risk category" uri="Strategy DRD\DT Pre-bureau risk category table.xml" contextMode="Shared" type="Table">
+      <Transition name="Transition3" to="DT Bureau call type" relationType="Information" />
+      <Transition name="Transition4" to="DT Eligibility" relationType="Information" />
+      <Transition name="Transition8" to="DRD Affordability" relationType="Information" />
+    </Decision>
+    <Decision name="DT Application risk score" uri="Strategy DRD\DT Application risk score model.xml" contextMode="Shared" type="Table">
+      <Transition name="Transition5" to="DT Pre-bureau risk category" relationType="Information" />
+    </Decision>
+    <SubDrd name="DRD Affordability" uri="Affordability\Affordability.xml" contextMode="New">
+      <Param name="riskList" value="PreBureauRiskCategory" />
+      <Param name="ApplicantData" value="ApplicantData" />
+      <Param name="RequestedProduct" value="RequestedProduct" />
+      <Transition name="Transition7" to="DT Eligibility" relationType="Information" />
+    </SubDrd>
+  </Nodes>
+</DRD>

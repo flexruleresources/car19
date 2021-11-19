@@ -1,0 +1,42 @@
+<DecisionTable name="DT Eligibility" processAll="False">
+  <Declaration>
+    <Define name="PreBureauRiskCategory" direction="In" />
+    <Define name="Eligibility" direction="Out" />
+    <Define name="Affordability" direction="In" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Pre-Bureau Risk Category" term="PreBureauRiskCategory" />
+    <Condition name="Pre-Bureau Affordability" expression="Affordability" />
+    <Condition name="Age" expression="ApplicantData.Age" />
+    <Action name="Eligibility" term="Eligibility" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>DECLINE</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>Ineligible</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value>false</Value>
+      <Value></Value>
+      <Value>Ineligible</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>&lt;18</Value>
+      <Value>Ineligible</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>Eligible</Value>
+    </Row>
+  </Data>
+</DecisionTable>

@@ -1,0 +1,82 @@
+<DecisionTable name="DT Application risk score" processAll="True" aggregation="Sum">
+  <Declaration>
+    <Define name="result" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Age" expression="ApplicantData.Age" />
+    <Condition name="Marital Status" term="MaritalStatus" />
+    <Condition name="Employment Status" term="EmploymentStatus" />
+    <Action name="Partial score" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>[18,21]</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>32</Value>
+    </Row>
+    <Row>
+      <Value>[22,25]</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>35</Value>
+    </Row>
+    <Row>
+      <Value>[26,35]</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>40</Value>
+    </Row>
+    <Row>
+      <Value>[36,49]</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>43</Value>
+    </Row>
+    <Row>
+      <Value>&gt;=50</Value>
+      <Value></Value>
+      <Value></Value>
+      <Value>48</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value>S</Value>
+      <Value></Value>
+      <Value>25</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value>M</Value>
+      <Value></Value>
+      <Value>45</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>UNEMPLOYED</Value>
+      <Value>15</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>STUDENT</Value>
+      <Value>18</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>EMPLOYED</Value>
+      <Value>45</Value>
+    </Row>
+    <Row>
+      <Value></Value>
+      <Value></Value>
+      <Value>SELF-EMPLOYED</Value>
+      <Value>36</Value>
+    </Row>
+  </Data>
+</DecisionTable>

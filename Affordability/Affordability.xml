@@ -1,0 +1,24 @@
+<DRD name="DRD Pre-Bureau Affordability">
+  <Declaration>
+    <Define name="ApplicantData" direction="In" />
+    <Define name="RequestedProduct" direction="In" />
+    <Define name="riskList" direction="In" />
+    <Define name="Affordability" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BoxedExpression.xml" />
+  </Glossary>
+  <Nodes>
+    <Decision name="DT Affordability" type="Table" uri="Affordability\DT Affordability.xml" contextMode="Shared" />
+    <Decision name="DT Monthly Fee" type="Table" uri="Affordability\DT Monthly Fee.xml" contextMode="Shared">
+      <Transition name="Transition1" to="DT Affordability" relationType="Information" />
+    </Decision>
+    <Decision name="DT Credit contingency factor" type="Table" uri="Common Logic\DT Credit contingency factor table.xml" contextMode="Shared">
+      <Param name="riskList" value="riskList" />
+      <Transition name="Transition2" to="DT Affordability" relationType="Information" />
+    </Decision>
+    <InputData name="riskList" isOutput="False">
+      <Transition name="Transition3" to="DT Credit contingency factor" relationType="Information" />
+    </InputData>
+  </Nodes>
+</DRD>

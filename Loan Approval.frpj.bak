@@ -1,0 +1,76 @@
+<Designer>
+  <Project>
+    <Name>Loan Approval</Name>
+    <Path>D:\Pliant Framework\Samples\Loan Approval Workflow</Path>
+    <Description></Description>
+    <Folders>
+      <Path>Strategy DRD</Path>
+      <Path>Routing DRD</Path>
+      <Path>Common Logic</Path>
+      <Path>Affordability</Path>
+    </Folders>
+  </Project>
+  <Files>
+    <Add rule="Strategy DRD\DT Bureau call type table.xml" help="DT Bureau call type table.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="f7f91b96-dcb9-411d-b863-6ad5a1ab835e" />
+    <Add rule="Strategy DRD\DT Pre-bureau risk category table.xml" help="DT Pre-bureau risk category table.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="168aea09-eb2f-448b-a57e-97fe3c13fde4" />
+    <Add rule="Strategy DRD\DT Application risk score model.xml" help="DT Application risk score model.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="9806f64d-3e28-4ae0-861c-811632a23ff2" />
+    <Add rule="Common Logic\DT Credit contingency factor table.xml" help="DT Credit contingency factor table.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="bd03aab8-9c7b-4b12-b165-a9765506cec8" />
+    <Add rule="Strategy DRD\DT Eligibility rules.xml" help="DT Eligibility rules.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="a2539e68-c7dc-441f-844a-acbaa2b43358" />
+    <Add rule="Routing DRD\DT Routing rules.xml" help="DT Routing rules.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="af1eaa10-a2b6-449d-ac54-b7a2d3634026" />
+    <Add rule="Routing DRD\DT Post-bureau risk category table.xml" help="DT Post-bureau risk category table.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="dd73a2c3-8eda-416b-aad3-ccb4c7e6bee7" />
+    <Add rule="Strategy DRD\DT Strategy.xml" help="DT Strategy.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="fa85b5b0-2521-4fef-9853-c3fd135b0225" />
+    <Add rule="Common Logic\BoxedExpression.xml" help="BoxedExpression.xml" handler="FlexRule.Designer.DMN.BoxedExpressionFormHandler, FlexRule.Designer.DMN, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="01321bdb-2116-492d-84b0-f5af320e0c97" />
+    <Add rule="Strategy DRD\DRD Strategy.xml" help="DRD Strategy.xml" handler="FlexRule.Designer.DMN.DrgFormHandler, FlexRule.Designer.DMN, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="d06b7d96-f22d-4467-a5a5-1fc49b0da77d" />
+    <Add rule="Routing DRD\DRD Routing.xml" help="DRD Routing.xml" handler="FlexRule.Designer.DMN.DrgFormHandler, FlexRule.Designer.DMN, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="49222b6d-f227-44e6-9da4-8e1213dbd356" />
+    <Add rule="Affordability\DT Affordability.xml" help="DT Affordability.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="62006335-f9d6-4e6d-a3fe-f6fb45aa07fe" />
+    <Add rule="Affordability\Affordability.xml" help="Affordability.xml" handler="FlexRule.Designer.DMN.DrgFormHandler, FlexRule.Designer.DMN, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="5d5237ae-7cb9-48b6-bad4-16a4de2e9a8a" />
+    <Add rule="Affordability\DT Monthly Fee.xml" help="DT Monthly Fee.xml" handler="FlexRule.Designer.DecisionTable.SpreadSheetFormHandler, FlexRule.Designer.DecisionTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="4bdf9b59-e2f3-4965-bfcb-fd171f6b1d49" />
+    <Add rule="Common Logic\BusinessGlossary.xml" help="BusinessGlossary.xml" handler="FlexRule.Designer.NaturalLanguage.GlossaryFormHandler, FlexRule.Designer.NaturalLanguage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="43dd5796-5d66-403b-b20f-aaba8dec449b" />
+    <Add rule="Common Logic\InputDataConcept.xml" help="InputDataConcept.xml" handler="FlexRule.Designer.FactConcepts.ConceptFormHandler, FlexRule.Designer.FactConcepts, Version=6.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="94b9d610-b742-4c6f-84db-b43e280d5405" />
+    <Add rule="MainWorkflow.xml" help="MainWorkflow.xml" handler="FlexRule.Designer.RuleFlow.WorkflowFormHandler, FlexRule.Designer.FlowEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dade78f156180a92" uid="98592809-9d81-47f2-a7db-6fd297b33362" />
+  </Files>
+  <References>
+    <Add assembly="Common Logic\InputDataConcept.xml" />
+  </References>
+  <ProjectProviders>
+    <Builders>
+      <Add assembly="FlexRule.Designer.ProceduralEngine.dll" type="FlexRule.Designer.ProceduralEngine.ElementItemBuilderBuiltinElementStrategy" description="Default commands of procedural rule" />
+      <Add assembly="FlexRule.Designer.FlowEngine.dll" type="FlexRule.Designer.RuleFlow.ElementItemBuilderBuiltinElementStrategy" description="Default nodes of Flow engine" />
+      <Add assembly="FlexRule.Designer.ValidationEngine.dll" type="FlexRule.Designer.ValidationEngine.ValidationEngineBuilderStrategy" description="Validation rule document" />
+      <Add assembly="FlexRule.Designer.ValidationEngine.dll" type="FlexRule.Designer.ValidationEngine.ValidatorBuilderStrategy" description="Validation engine 'Validator' command" />
+      <Add assembly="FlexRule.Designer.Core.dll" type="FlexRule.Designer.Notifications.NotificationBuilderStrategy" description="Notification command" />
+      <Add assembly="FlexRule.Designer.Deployment.dll" type="FlexRule.Designer.Deployment.DeploymentBuilderStrategy" description="Deployment Profile document" />
+      <Add assembly="FlexRule.Designer.DecisionTable.dll" type="FlexRule.Designer.DecisionTable.ElementItemBuilderBuiltinElementStrategy" description="Decision Table document builder" />
+      <Add assembly="FlexRule.Designer.DecisionTable.dll" type="FlexRule.Designer.DecisionTable.CallDecisionTableBuilderStrategy" description="Decision table engine call command" />
+      <Add assembly="FlexRule.Designer.Database.dll" type="FlexRule.Designer.Database.DatabaseBuilderStrategy" description="Commands to connect to a database" />
+      <Add assembly="FlexRule.Designer.Database.dll" type="FlexRule.Designer.Database.DataBuilderStrategy" description="Data processing toolbox" />
+      <Add assembly="FlexRule.Designer.DMN.dll" type="FlexRule.Designer.DMN.DecisionReqDiagramBuilderStrategy" description="Decision Modeling Notation (DMN)" />
+      <Add assembly="FlexRule.Designer.DMN.dll" type="FlexRule.Designer.DMN.InformationReqDiagramBuilderStrategy" description="Information Requirement Diagram" />
+      <Add assembly="FlexRule.Designer.DMN.dll" type="FlexRule.Designer.DMN.CallDrdBuilderStrategy" description="DMN command" />
+      <Add assembly="FlexRule.Designer.DMN.dll" type="FlexRule.Designer.IRD.CallIrdBuilderStrategy" description="IRD command" />
+      <Add assembly="FlexRule.Designer.FlowEngine.dll" type="FlexRule.Designer.RuleFlow.CallFlowBuilderStrategy" description="Subflow" />
+      <Add assembly="FlexRule.Designer.NaturalLanguage.dll" type="FlexRule.Designer.NaturalLanguage.CallNaturalLanguageBuilderStrategy" description="NL command" />
+      <Add assembly="FlexRule.Designer.Tester.dll" type="FlexRule.Designer.Tester.TesterBuilderStrategy" description="TestCase document" />
+      <Add assembly="FlexRule.Designer.NaturalLanguage.dll" type="FlexRule.Designer.NaturalLanguage.ElementItemBuilderBuiltinElementStrategy" description="Natural language and Glossary document builder" />
+      <Add assembly="FlexRule.Designer.ResourceEditor.dll" type="FlexRule.Designer.ResourceEditor.Messages.ElementItemBuilderBuiltinElementStrategy" description="Resource editor commands" />
+      <Add assembly="FlexRule.Designer.DMN.dll" type="FlexRule.Designer.DMN.BoxedExpressionBuilderStrategy" description="Boxed Expression allows building reusable expressions across project" />
+      <Add assembly="FlexRule.Designer.FactConcepts.dll" type="FlexRule.Designer.FactConcepts.ConceptDiagramBuilderStrategy" description="Concept and Fact Types Model" />
+      <Add assembly="FlexRule.Designer.FlowEngine.dll" type="FlexRule.Designer.RuleFlow.Internet.InternetBuilderStrategy" description="" />
+      <Add assembly="FlexRule.Designer.FlowEngine.dll" type="FlexRule.Designer.RuleFlow.DirectoryService.DirectoryServiceBuilderStrategy" description="" />
+    </Builders>
+  </ProjectProviders>
+  <TreeDocument>
+    <FollowIdent value="True" />
+    <ShowAttribute value="False" />
+    <ShowDescription value="False" />
+    <ShowType value="True" />
+    <ShowValue value="True" />
+    <ShowTreeLines value="True" />
+    <ShowGridLines value="True" />
+  </TreeDocument>
+  <Debugger>
+    <Runtime path="" />
+    <License path="" />
+  </Debugger>
+  <Metadata />
+</Designer>

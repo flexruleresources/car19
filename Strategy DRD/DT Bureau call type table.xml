@@ -1,0 +1,35 @@
+<DecisionTable name="DT Bureau call type" processAll="False">
+  <Declaration>
+    <Define name="PreBureauRiskCategory" direction="In" />
+    <Define name="BureauCallType" direction="Out" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Pre-Bureau Risk Category" term="PreBureauRiskCategory" />
+    <Action name="Bureau Call Type" term="BureauCallType" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>HIGH</Value>
+      <Value>FULL</Value>
+    </Row>
+    <Row>
+      <Value>MEDIUM</Value>
+      <Value>FULL</Value>
+    </Row>
+    <Row>
+      <Value>LOW</Value>
+      <Value>MINI</Value>
+    </Row>
+    <Row>
+      <Value>VERY LOW</Value>
+      <Value>NONE</Value>
+    </Row>
+    <Row>
+      <Value>DECLINE</Value>
+      <Value>NONE</Value>
+    </Row>
+  </Data>
+</DecisionTable>

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "BureauData",
+    "Assembly": null,
+    "Type": "FlexRule.Json",
+    "Object": "{\r\n  \"Bankrupt\": false,\r\n  \"CreditScore\": 580m\r\n}",
+    "JsonSource": null,
+    "IsParameterList": false
+  }
+]

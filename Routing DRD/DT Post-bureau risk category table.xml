@@ -1,0 +1,95 @@
+<DecisionTable name="DT Post-bureau risk category" processAll="False">
+  <Declaration>
+    <Define name="PostBureauRiskCategory" direction="Out" />
+    <Define name="result" direction="In" />
+  </Declaration>
+  <Glossary>
+    <GlossarySource uri="Common Logic\BusinessGlossary.xml" />
+  </Glossary>
+  <Columns>
+    <Condition name="Existing Customer" term="ExistingCustomer" />
+    <Condition name="Application Risk Score" expression="result" />
+    <Condition name="Credit Score" expression="BureauData.CreditScore" />
+    <Action name="Post Bureau Risk Category" term="PostBureauRiskCategory" />
+  </Columns>
+  <Data>
+    <Row>
+      <Value>false</Value>
+      <Value>&lt;120</Value>
+      <Value>&lt;590</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>&lt;120</Value>
+      <Value>[590,610]</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>&lt;120</Value>
+      <Value>&gt;610</Value>
+      <Value>LOW</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>[120,130]</Value>
+      <Value>&lt;600</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>[120,130]</Value>
+      <Value>[600,625]</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>[120,130]</Value>
+      <Value>&gt;625</Value>
+      <Value>LOW</Value>
+    </Row>
+    <Row>
+      <Value>false</Value>
+      <Value>&gt;130</Value>
+      <Value></Value>
+      <Value>VERY LOW</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&lt;=100</Value>
+      <Value>&lt;580</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&lt;=100</Value>
+      <Value>[580,600]</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&lt;=100</Value>
+      <Value>&gt;600</Value>
+      <Value>LOW</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&gt;100</Value>
+      <Value>&lt;590</Value>
+      <Value>HIGH</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&gt;100</Value>
+      <Value>[590,615]</Value>
+      <Value>MEDIUM</Value>
+    </Row>
+    <Row>
+      <Value>true</Value>
+      <Value>&gt;100</Value>
+      <Value>&gt;615</Value>
+      <Value>LOW</Value>
+    </Row>
+  </Data>
+</DecisionTable>

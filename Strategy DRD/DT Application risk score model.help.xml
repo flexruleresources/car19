@@ -1,0 +1,503 @@
+<workbook>
+  <worksheets>
+    <worksheet name="Sheet1" defaultColumnWidth="48pt" defaultRowHeight="14.25pt" frozenRows="3">
+      <columnStyles>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="0" s="1" />
+                <s p="1" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="0" y="0" width="1" height="1" />
+          <style t="1">
+            <width>112.5pt</width>
+            <hidden>0</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="1" s="1" />
+                <s p="2" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="1" y="0" width="1" height="1" />
+          <style t="1">
+            <width>138pt</width>
+            <hidden>0</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="2" s="1" />
+                <s p="3" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="2" y="0" width="1" height="1" />
+          <style t="1">
+            <width>121.5pt</width>
+            <hidden>0</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="3" s="1" />
+                <s p="4" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="3" y="0" width="1" height="1" />
+          <style t="1">
+            <width>54pt</width>
+            <hidden>0</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="4" s="1" />
+                <s p="1024" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="4" y="0" width="1020" height="1" />
+          <style t="1">
+            <hidden>1</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+      </columnStyles>
+      <rowStyles>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="1" s="1" />
+                <s p="2" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="1" y="0" width="1" height="1" />
+          <style t="2">
+            <hidden>0</hidden>
+            <outlineLevel>1</outlineLevel>
+            <conditionalFormats />
+            <fontSize>8</fontSize>
+            <fontItalic>1</fontItalic>
+            <halign>2</halign>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="3" s="1" />
+                <s p="4" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="3" y="0" width="1" height="1" />
+          <style t="2">
+            <height>14.25pt</height>
+            <conditionalFormats />
+            <fontName>Segoe UI</fontName>
+            <fontSize>9</fontSize>
+            <indent>2px</indent>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="4" s="1" />
+                <s p="14" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="4" y="0" width="10" height="1" />
+          <style t="2">
+            <height>14.25pt</height>
+            <conditionalFormats />
+            <fontName>Segoe UI</fontName>
+            <fontSize>9</fontSize>
+            <indent>2px</indent>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="0" s="1" />
+                <s p="1" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="0" y="0" width="1" height="1" />
+          <style t="2">
+            <height>14.25pt</height>
+            <conditionalFormats />
+            <fontBold>1</fontBold>
+            <halign>2</halign>
+            <valign>2</valign>
+            <wrapText>1</wrapText>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="2" s="1" />
+                <s p="3" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="2" y="0" width="1" height="1" />
+          <style t="2">
+            <hidden>0</hidden>
+            <outlineLevel>1</outlineLevel>
+            <conditionalFormats />
+            <fontSize>8</fontSize>
+            <fontItalic>1</fontItalic>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="1">
+              <segments>
+                <s p="14" s="1" />
+                <s p="1048576" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="14" y="0" width="1048562" height="1" />
+          <style t="2">
+            <hidden>1</hidden>
+            <conditionalFormats />
+          </style>
+        </region>
+      </rowStyles>
+      <styles>
+        <region>
+          <lines>
+            <l ymin="3" ymax="14">
+              <segments>
+                <s p="0" s="1" />
+                <s p="4" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="0" y="3" width="4" height="11" />
+          <style t="0">
+            <conditionalFormats />
+            <halign>1</halign>
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="3">
+              <segments>
+                <s p="0" s="1" />
+                <s p="3" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="0" y="0" width="3" height="3" />
+          <style t="0">
+            <conditionalFormats />
+            <background id="0" />
+          </style>
+        </region>
+        <region>
+          <lines>
+            <l ymin="0" ymax="3">
+              <segments>
+                <s p="3" s="1" />
+                <s p="4" s="0" />
+              </segments>
+            </l>
+          </lines>
+          <bounds x="3" y="0" width="1" height="3" />
+          <style t="0">
+            <conditionalFormats />
+            <background id="1" />
+          </style>
+        </region>
+      </styles>
+      <mergedCells />
+      <columns>
+        <column n="0" pageBreak="0" collapsed="0">
+          <tag />
+        </column>
+        <column n="1" pageBreak="0" collapsed="0">
+          <tag />
+        </column>
+        <column n="2" pageBreak="0" collapsed="0">
+          <tag />
+        </column>
+        <column n="3" pageBreak="0" collapsed="0">
+          <tag />
+        </column>
+      </columns>
+      <data>
+        <row r="0" title="MultiHit" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">1</v>
+          </c>
+          <c c="1">
+            <v t="23">2</v>
+          </c>
+          <c c="2">
+            <v t="23">3</v>
+          </c>
+          <c c="3">
+            <v t="23">4</v>
+          </c>
+        </row>
+        <row r="1" title="" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">5</v>
+          </c>
+          <c c="1">
+            <v t="23">5</v>
+          </c>
+          <c c="2">
+            <v t="23">5</v>
+          </c>
+          <c c="3">
+            <v t="23">6</v>
+          </c>
+        </row>
+        <row r="2" title="" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">7</v>
+          </c>
+          <c c="1">
+            <v t="23">8</v>
+          </c>
+          <c c="2">
+            <v t="23">9</v>
+          </c>
+          <c c="3">
+            <v t="23">10</v>
+          </c>
+        </row>
+        <row r="3" title="1" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">11</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">12</v>
+          </c>
+        </row>
+        <row r="4" title="2" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">13</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">14</v>
+          </c>
+        </row>
+        <row r="5" title="3" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">15</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">16</v>
+          </c>
+        </row>
+        <row r="6" title="4" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">17</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">18</v>
+          </c>
+        </row>
+        <row r="7" title="5" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">19</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">20</v>
+          </c>
+        </row>
+        <row r="8" title="6" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">21</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">22</v>
+          </c>
+        </row>
+        <row r="9" title="7" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">23</v>
+          </c>
+          <c c="2">
+            <v t="23">10</v>
+          </c>
+          <c c="3">
+            <v t="23">24</v>
+          </c>
+        </row>
+        <row r="10" title="8" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">25</v>
+          </c>
+          <c c="3">
+            <v t="23">26</v>
+          </c>
+        </row>
+        <row r="11" title="9" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">27</v>
+          </c>
+          <c c="3">
+            <v t="23">28</v>
+          </c>
+        </row>
+        <row r="12" title="10" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">29</v>
+          </c>
+          <c c="3">
+            <v t="23">24</v>
+          </c>
+        </row>
+        <row r="13" title="11" pageBreak="0" collapsed="0">
+          <c c="0">
+            <v t="23">10</v>
+          </c>
+          <c c="1">
+            <v t="23">10</v>
+          </c>
+          <c c="2">
+            <v t="23">30</v>
+          </c>
+          <c c="3">
+            <v t="23">31</v>
+          </c>
+        </row>
+      </data>
+      <hyperlinks />
+      <drawing />
+    </worksheet>
+  </worksheets>
+  <resources>
+    <sharedStrings>
+      <s n="1">Age</s>
+      <s n="2">Marital Status</s>
+      <s n="3">Employment Status</s>
+      <s n="4">Partial score</s>
+      <s n="5">Condition</s>
+      <s n="6">Action</s>
+      <s n="7">ApplicantData.Age</s>
+      <s n="8">{S, M}</s>
+      <s n="9">{UNEMPLOYED, EMPLOYED, STUDENT, SELF-EMPLOYED}</s>
+      <s n="10"></s>
+      <s n="11">[18,21]</s>
+      <s n="12">32</s>
+      <s n="13">[22,25]</s>
+      <s n="14">35</s>
+      <s n="15">[26,35]</s>
+      <s n="16">40</s>
+      <s n="17">[36,49]</s>
+      <s n="18">43</s>
+      <s n="19">&gt;=50</s>
+      <s n="20">48</s>
+      <s n="21">S</s>
+      <s n="22">25</s>
+      <s n="23">M</s>
+      <s n="24">45</s>
+      <s n="25">UNEMPLOYED</s>
+      <s n="26">15</s>
+      <s n="27">STUDENT</s>
+      <s n="28">18</s>
+      <s n="29">EMPLOYED</s>
+      <s n="30">SELF-EMPLOYED</s>
+      <s n="31">36</s>
+    </sharedStrings>
+    <brushes>
+      <brush n="0" t="solid">
+        <color>#FFC0FFC0</color>
+      </brush>
+      <brush n="1" t="solid">
+        <color>#FFFFE0C0</color>
+      </brush>
+    </brushes>
+    <images />
+  </resources>
+  <namedRanges />
+</workbook>

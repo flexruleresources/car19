@@ -1,0 +1,15 @@
+<Glossary name="sample glossary">
+  <Declaration>
+    <Define name="fact" direction="In" />
+  </Declaration>
+  <Formula name="PMT" expression="(amount * rate/12) / (1 - (1 + rate/12)** (-1*term))">
+    <Param name="amount" />
+    <Param name="rate" />
+    <Param name="term" />
+  </Formula>
+  <Formula name="Disposable Income" expression="income - (repayments + expenses)">
+    <Param name="income" />
+    <Param name="repayments" />
+    <Param name="expenses" />
+  </Formula>
+</Glossary>

@@ -1,0 +1,114 @@
+<Concept namespace="inputs">
+  <Fact name="Bureau data">
+    <Property name="Bankrupt" type="bool">
+      <Constraints>
+        <Add type="Required" message="Bankrupt is required." />
+        <Add type="CheckType" message="Bankrupt must be a bool type." />
+      </Constraints>
+    </Property>
+    <Property name="CreditScore" type="decimal">
+      <Constraints>
+        <Add type="Required" message="CreditScore is required." />
+        <Add type="CheckType" message="CreditScore must be a decimal type." />
+      </Constraints>
+    </Property>
+  </Fact>
+  <Fact name="Applicant data">
+    <Property name="Age" type="int">
+      <Constraints>
+        <Add type="Required" message="Age is required." />
+        <Add type="CheckType" message="Age must be a int type." />
+      </Constraints>
+    </Property>
+    <Property name="MaritalStatus" fact="MaritalStatus">
+      <Constraints>
+        <Add type="NotNullOrEmpty" message="MaritalStatus must not Null or Empty" />
+        <Add type="Required" message="MaritalStatus is required." />
+        <Add type="CheckType" message="MaritalStatus must be a string type." />
+      </Constraints>
+    </Property>
+    <Property name="EmploymentStatus" fact="EmploymentStatus">
+      <Constraints>
+        <Add type="Required" message="EmploymentStatus is required." />
+        <Add type="CheckType" message="EmploymentStatus must be a string type." />
+        <Add type="NotNullOrEmpty" message="EmploymentStatus must not be Empty or Null" />
+      </Constraints>
+    </Property>
+    <Property name="ExistingCustomer" type="bool">
+      <Constraints>
+        <Add type="CheckType" message="ExistingCustomer must be a bool type." />
+        <Add type="Required" message="ExistingCustomer is required." />
+      </Constraints>
+    </Property>
+    <Property name="Monthly" fact="Monthly">
+      <Constraints>
+        <Add type="Required" message="Monthly is required." />
+        <Add type="CheckType" message="Invalid Type" />
+      </Constraints>
+    </Property>
+  </Fact>
+  <Fact name="Monthly">
+    <Property name="Income" type="decimal">
+      <Constraints>
+        <Add type="Required" message="Income is required." />
+        <Add type="CheckType" message="Income must be a decimal type." />
+      </Constraints>
+    </Property>
+    <Property name="Repayments" type="decimal">
+      <Constraints>
+        <Add type="Required" message="Repayments is required." />
+        <Add type="CheckType" message="Repayments must be a decimal type." />
+      </Constraints>
+    </Property>
+    <Property name="Expenses" type="decimal">
+      <Constraints>
+        <Add type="Required" message="Expenses is required." />
+        <Add type="CheckType" message="Expenses must be a decimal type." />
+      </Constraints>
+    </Property>
+  </Fact>
+  <Fact name="Requested product">
+    <Property name="ProductType" type="string">
+      <Constraints>
+        <Add type="Required" message="ProductType is required." />
+        <Add type="NotNullOrEmpty" message="NotNullOrEmpty must not be Empty or Null" />
+        <Add type="CheckType" message="ProductType must be a string type." />
+      </Constraints>
+    </Property>
+    <Property name="Rate" type="decimal">
+      <Constraints>
+        <Add type="Required" message="Rate is required." />
+        <Add type="CheckType" message="Rate must be a decimal type." />
+      </Constraints>
+    </Property>
+    <Property name="Term" type="int">
+      <Constraints>
+        <Add type="Required" message="Term is required." />
+        <Add type="CheckType" message="Term must be a int type." />
+      </Constraints>
+    </Property>
+    <Property name="Amount" type="decimal">
+      <Constraints>
+        <Add type="Required" message="Amount is required." />
+        <Add type="CheckType" message="Amount must be a decimal type." />
+      </Constraints>
+    </Property>
+  </Fact>
+  <Option name="PreBureauRiskCategory">
+    <Property name="LOW" />
+    <Property name="VERY LOW" />
+    <Property name="DECLINE" />
+    <Property name="HIGH" />
+    <Property name="MEDIUM" />
+  </Option>
+  <Option name="MaritalStatus">
+    <Property name="S" />
+    <Property name="M" />
+  </Option>
+  <Option name="EmploymentStatus">
+    <Property name="UNEMPLOYED" />
+    <Property name="EMPLOYED" />
+    <Property name="STUDENT" />
+    <Property name="SELF-EMPLOYED" />
+  </Option>
+</Concept>

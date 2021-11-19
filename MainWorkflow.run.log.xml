@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExecTemplate>
+  <Record date="2017-07-26T22:45:19.3457838Z" file="MainWorkflow.xml" title="Collect Application Data" task="Read Application Data">
+    <Run providerType="DataComposer" file="Data\collect-application-data.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+  <Record date="2017-07-26T23:45:19.3457838Z" file="MainWorkflow.xml" title="Collect BureauData (Accept)" task="Collect Bureau Data">
+    <Run providerType="DataComposer" file="Data\BureauData-accept.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+  <Record date="2017-07-26T23:45:19.3457838Z" file="MainWorkflow.xml" title="Collect BureauData (Decline)" task="Collect Bureau Data">
+    <Run providerType="DataComposer" file="Data\BureauData-decline.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+  <Record date="2017-07-26T23:45:19.3457838Z" file="MainWorkflow.xml" title="Collect BureauData (Team Review)" task="Collect Bureau Data">
+    <Run providerType="DataComposer" file="Data\BureauData-team-review.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+  <Record date="2017-07-29T01:10:32.2099955Z" file="MainWorkflow.xml" title="Collect Application Data (Invalid)" task="Read Application Data">
+    <Run providerType="DataComposer" file="data\collect-application-data-invalid.dc.json" />
+    <Options input="1" target="0" logic="" />
+  </Record>
+</ExecTemplate>
