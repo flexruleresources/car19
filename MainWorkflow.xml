@@ -50,7 +50,7 @@
       <Transition name="Transition15" to="Routing DRD" condition="IsValid" />
       <Transition name="Transition35" to="Collect Bureau Data" />
     </Activity>
-    <Activity name="Routing DRD">
+    <Activity name="Routing DRD1">
       <CallDrd contextMode="Shared">
         <DrdSource uri="Routing DRD\DRD Routing.xml" />
       </CallDrd>
